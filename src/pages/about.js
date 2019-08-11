@@ -58,7 +58,8 @@ const About = () => (
       <TextContainer>
         <p>
           Aziz Ramos is an artist, designer and front-end developer with a
-          passion in making just about anything from the ground up.
+          passion in making viable products and just about anything from start
+          to finish.
         </p>
         <p>
           He is currently working at Universal Music Group as a web designer and

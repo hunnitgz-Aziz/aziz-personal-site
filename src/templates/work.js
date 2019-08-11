@@ -9,7 +9,7 @@ const PostContainer = styled.div`
   margin: 0 auto;
 `
 
-const Title = styled.h2`
+const Title = styled.h3`
   max-width: 1024px;
   margin: 0 auto 1.5rem;
 `

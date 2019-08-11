@@ -12,14 +12,25 @@ const Wrapper = styled.div`
   align-items: center;
 
   @media (max-width: 480px) {
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     align-content: flex-start;
     align-items: flex-start;
     padding: 1rem;
   }
 `
 
-const LinkContainer = styled.div``
+const LinkContainer = styled.div`
+  @media (max-width: 480px) {
+    flex: 0 1 50%;
+  }
+`
+
+const CopyrightContainer = styled.div`
+  @media (max-width: 480px) {
+    flex: 0 1 50%;
+    text-align: right;
+  }
+`
 
 const LinkList = styled.ul`
   list-style-type: none;
@@ -43,8 +54,6 @@ const Link = styled.a`
   font-size: 22px;
   box-shadow: none;
 `
-
-const CopyrightContainer = styled.div``
 
 const Footer = () => (
   <FooterContainer>

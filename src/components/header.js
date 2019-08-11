@@ -56,6 +56,7 @@ const RouteLink = styled(props => <Link {...props} />)`
   text-transform: lowercase;
   padding-left: 0.75rem;
   box-shadow: none;
+  text-align: right;
 `
 
 const Header = ({ siteTitle }) => (

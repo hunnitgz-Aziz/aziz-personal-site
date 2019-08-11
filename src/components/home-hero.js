@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Poster from "../images/home-hero-desktop.jpg"
+import Poster from "../images/home-hero-mobile.jpg"
 
 const VideoHero = styled.div`
   position: relative;

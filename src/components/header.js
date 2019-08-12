@@ -37,7 +37,11 @@ const LogoLink = styled(props => <Link {...props} />)`
   }
 `
 
-const RouteContainer = styled.div``
+const RouteContainer = styled.div`
+  @media (max-width: 480px) {
+    text-align: right;
+  }
+`
 
 const RouteList = styled.ul`
   list-style-type: none;

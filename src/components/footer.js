@@ -5,7 +5,7 @@ const FooterContainer = styled.footer``
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  padding: 1rem 2.5rem;
+  padding: 1rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-content: center;

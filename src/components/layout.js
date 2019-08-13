@@ -17,7 +17,7 @@ import styled from "styled-components"
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  padding: 0 2.5rem;
+  padding: 0 1.5rem;
   padding-top: 0;
 
   @media (max-width: 480px) {

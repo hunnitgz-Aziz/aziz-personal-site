@@ -67,9 +67,14 @@ const About = () => (
         </p>
         <p>
           He's either spending time working with his good friends at{" "}
-          <a href="http://museache.com">Museache</a> [his PR/creative agency],
-          in the gym putting shots up on <a href="Dribbble">Dribbble</a>, or
-          making some furniture and stuff in the garage.
+          <a href="http://museache.com" target="_blank">
+            Museache
+          </a>{" "}
+          [his PR/creative agency], in the gym putting shots up on{" "}
+          <a href="https://dribbble.com/azizramos" target="_blank">
+            Dribbble
+          </a>
+          , or making some furniture and stuff in the garage.
         </p>
         <p>
           No matter what, Aziz always needs something to do so don't hesitate to

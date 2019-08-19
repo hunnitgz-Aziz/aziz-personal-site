@@ -74,7 +74,8 @@ const About = () => (
           <a href="https://dribbble.com/azizramos" target="_blank">
             Dribbble
           </a>
-          , or making some furniture and stuff in the garage.
+          , or making some furniture and stuff{" "}
+          <a href="http://www.azizbuilds.com">in the garage.</a>
         </p>
         <p>
           No matter what, Aziz always needs something to do so don't hesitate to

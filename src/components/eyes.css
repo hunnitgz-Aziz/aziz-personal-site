@@ -1,0 +1,7 @@
+.left-eye {
+  transform: translate(16%, 33%);
+}
+
+.right-eye {
+  transform: translateX(57%);
+}

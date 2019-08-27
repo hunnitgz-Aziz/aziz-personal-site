@@ -12,6 +12,7 @@ const VideoHero = styled.div`
 
 const Video = styled.video`
   width: 100%;
+  max-width: 100%;
 `
 
 const Wrapper = styled.div`

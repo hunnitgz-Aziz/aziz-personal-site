@@ -28,13 +28,18 @@ const ProjectHomeLink = styled(props => <Link {...props} />)`
   margin: 3rem 0 2rem;
 `
 
+const FeaturedImage = styled.img`
+  display: block;
+  width: 100%;
+`
+
 const ProjectPost = ({ data }) => {
   const { title, body, image, tags } = data.contentfulProject
   return (
     <Layout>
       <SEO title={title} />
       <Post className="project-post">
-        <img alt={title} src={image.file.url} />
+        <FeaturedImage alt={title} src={image.file.url} />
         <Title>{title}</Title>
         <PostContainer
           dangerouslySetInnerHTML={{ __html: body.childMarkdownRemark.html }}

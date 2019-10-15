@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
+import ScrollContainer from "../components/scroll-container"
 
 const PostContainer = styled.div`
   max-width: 1024px;

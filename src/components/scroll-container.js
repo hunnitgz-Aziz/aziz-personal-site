@@ -8,13 +8,20 @@ const Container = styled.div`
 `
 
 const ScrollBlock = styled.div`
+  background: #b0b0b0;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  height: 480px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 const Image = styled.img`
   display: inline-block;
+  margin-bottom: 0;
 `
 
 const Scroll = () => {

@@ -22,11 +22,18 @@ const LinkContainer = styled.div`
 `
 
 const ProjectHomeLink = styled(props => <Link {...props} />)`
-  text-decoration: none;
-  color: #222;
-  display: inline;
-  text-align: center;
-  margin: 3rem 0 2rem;
+  display: block;
+  width: 100%;
+  border: 4px solid #000;
+  box-shadow: none;
+  max-width: 1024px;
+  margin: 1rem auto 2rem;
+  padding: 1rem;
+
+  &:hover {
+    color: #d3d3d3;
+    box-shadow: inset 0 -120px 0 rgba(0, 0, 0, 1);
+  }
 `
 
 const FeaturedImage = styled.img`

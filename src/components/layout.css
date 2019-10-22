@@ -621,3 +621,25 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.scroll-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.scroll-block {
+  background: #b0b0b0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 480px;
+}
+
+.scroll-block::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-block img {
+  display: inline-block;
+  margin-bottom: 0;
+}

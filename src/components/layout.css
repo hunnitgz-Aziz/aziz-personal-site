@@ -622,6 +622,8 @@ pre tt:after {
   }
 }
 
+/* Scroll Container Component Styles */
+
 .scroll-container {
   max-width: 1024px;
   margin: 0 auto;

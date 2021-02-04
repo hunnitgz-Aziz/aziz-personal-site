@@ -9,6 +9,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-transition-link`,
+    `@babel/plugin-transform-classes`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

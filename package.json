@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-classes": "^7.12.13",
+    "@babel/plugin-transform-spread": "7.12.1",
     "prettier": "^1.18.2"
   },
   "keywords": [

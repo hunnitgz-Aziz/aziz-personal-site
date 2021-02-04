@@ -4,7 +4,14 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  
+  @media (min-width: 640px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+  }
+`
 
 const Project = styled.div``
 
@@ -13,17 +20,17 @@ const Image = styled.img`
 
   @media (min-width: 1024px) {
     display: inline-block;
-    height: 100%;
+    // height: 100%;
     vertical-align: middle;
     margin: 0;
-    width: 50%;
+    // width: 50%;
   }
 `
 
 const TextBlock = styled.div`
   @media (min-width: 1024px) {
     display: inline-block;
-    width: 50%;
+    // width: 50%;
     height: 100%;
     vertical-align: middle;
     padding: 1rem;

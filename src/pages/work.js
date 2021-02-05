@@ -26,6 +26,7 @@ const Image = styled.img`
     // width: 50%;
   }
 `
+//mic check 2012
 
 const TextBlock = styled.div`
   @media (min-width: 1024px) {

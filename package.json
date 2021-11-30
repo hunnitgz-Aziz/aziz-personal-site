@@ -50,5 +50,8 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "resolutions": {
+    "@babel/plugin-transform-spread": "7.12.1"
   }
 }

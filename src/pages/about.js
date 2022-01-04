@@ -58,31 +58,16 @@ const About = () => (
       <Headline>Howdy</Headline>
       <TextContainer>
         <p>
-          Aziz Ramos is an artist, designer and front-end developer with a
-          passion in making viable products and just about anything from start
-          to finish.
+          Aziz Ramos is an artist, product designer and front-end developer with a
+          passion in making digital products that just feel good. He has past experiences in creative direction, branding, product strategy, design systems, and conceptual development which solved creative challenges in health, politics, academics, gaming, and music spaces.
         </p>
-        <p>
-          He is currently working at Universal Music Group as a web designer and
-          previously worked at Major League Hacking as the creative director.
-        </p>
-        <p>
-          He's either spending time working with his good friends at{" "}
-          <a href="http://museache.com" target="_blank">
-            Museache
-          </a>{" "}
-          [his PR/creative agency], in the gym putting shots up on{" "}
-          <a href="https://dribbble.com/azizramos" target="_blank">
-            Dribbble
-          </a>
-          , or making some furniture and stuff{" "}
-          <a href="http://www.azizbuilds.com">in the garage.</a>
-        </p>
-        <p>
-          No matter what, Aziz always needs something to do so don't hesitate to
-          send over that million dollar idea via{" "}
-          <a href="mailto:azizramos00@gmail.com">email.</a>
-        </p>
+        <h5>Background</h5>
+        <p>Atlantic Health System, Senior Product Designer<br/>Morristown, NJ, 2021</p>
+        <p>Pariah Interactive, Frontend Engineer<br/>Brooklyn, NY, 2021</p>
+        <p>Reach, UX Designer<br/>New York, NY, 2021</p>
+        <p>Gerry, UI/UX Designer & Frontend Engineer<br/>New York, NY, 2019-2021</p>
+        <p>Universal Music Group, Web Designer & Developer<br/>New York, NY, 2017-2019</p>
+        <p>Major League Hacking, Creative Director<br/>New York, NY, 2014-2017</p>
       </TextContainer>
     </Wrapper>
   </Layout>

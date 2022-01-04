@@ -1,18 +1,24 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import TransitionLink from "gatsby-plugin-transition-link"
 
-const HeaderContainer = styled.header``
+const HeaderContainer = styled.header`
+  height: 95px;
+`
 
 const Wrapper = styled.div`
+  position: fixed;
+  width: 100%;
+  z-index: 1001;
   margin: 0 auto;
   padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: space-between;
+  background: #d3d3d3;
 
   @media (max-width: 480px) {
     padding: 1rem;
@@ -38,9 +44,16 @@ const LogoLink = styled(props => <Link {...props} />)`
 `
 
 const RouteContainer = styled.div`
-  @media (max-width: 480px) {
-    text-align: right;
-  }
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: #d3d3d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 300ms;
+  transform: ${({nav}) => (nav ? "translateY(0)" : "translateY(-100%)")};
+  z-index: 1;
 `
 
 const RouteList = styled.ul`
@@ -50,7 +63,7 @@ const RouteList = styled.ul`
 `
 
 const RouteListItem = styled.li`
-  display: inline-block;
+  display: block;
   margin: 0;
 `
 
@@ -60,28 +73,76 @@ const RouteLink = styled(props => <Link {...props} />)`
   text-transform: lowercase;
   padding-left: 0.75rem;
   box-shadow: none;
-  text-align: right;
+  text-align: center;
+  font-size: 2rem;
 `
 
-const Header = ({ siteTitle }) => (
-  <HeaderContainer>
-    <Wrapper>
-      <Logo>
-        <LogoLink to="/">{siteTitle}</LogoLink>
-      </Logo>
-      <RouteContainer>
-        <RouteList>
-          <RouteListItem>
-            <RouteLink to="/work">Work</RouteLink>
-          </RouteListItem>
-          <RouteListItem>
-            <RouteLink to="/about">About</RouteLink>
-          </RouteListItem>
-        </RouteList>
-      </RouteContainer>
-    </Wrapper>
-  </HeaderContainer>
-)
+const MenuIcon = styled.button`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  div {
+    width: 1.5rem;
+    height: 2px;
+    transform-origin: 1px;
+    position: relative;
+    background: black;
+    transition: transform 300ms, opacity 300ms;
+
+    &:first-child {
+      transform: ${({nav}) => (nav ? "rotate(45deg)" : "rotate(0)")};
+    }
+
+    &:nth-child(2) {
+      opacity: ${({nav}) => (nav ? "0" : "1")};
+    }
+
+    &:nth-child(3) {
+      transform: ${({nav}) => (nav ? "rotate(-45deg)" : "rotate(0)")};
+    }
+  }
+`
+
+
+
+const Header = ({ siteTitle }) => {
+  const [nav, showNav] = useState(false)
+  return (
+    <>
+      <HeaderContainer>
+        <Wrapper>
+          <Logo>
+            <LogoLink to="/">{siteTitle}</LogoLink>
+          </Logo>
+          <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
+            <div></div>
+            <div></div>
+            <div></div>
+          </MenuIcon>
+        </Wrapper>
+        <RouteContainer nav={nav}>
+          <RouteList>
+            <RouteListItem>
+              <RouteLink to="/work">Work</RouteLink>
+            </RouteListItem>
+            <RouteListItem>
+              <RouteLink to="/art">Art</RouteLink>
+            </RouteListItem>
+            <RouteListItem>
+              <RouteLink to="/about">About</RouteLink>
+            </RouteListItem>
+          </RouteList>
+        </RouteContainer>
+      </HeaderContainer>
+    </>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

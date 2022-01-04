@@ -69,8 +69,8 @@ const Footer = () => (
             </Link>
           </LinkListItem>
           <LinkListItem>
-            <Link href="https://twitter.com/_azizramos" target="_blank">
-              Twitter
+            <Link href="https://workingnotworking.com/86709-aziz" target="_blank">
+              WNW
             </Link>
           </LinkListItem>
           <LinkListItem>

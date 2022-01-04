@@ -50,9 +50,8 @@ const TagLine = styled.small`
 const HomeHero = () => (
   <VideoHero>
     <HeroCopy>
-      <TagLine>Bored thinker</TagLine>
-      <TagLine>Designer</TagLine>
-      <TagLine>Creative Developer</TagLine>
+      <TagLine>Product Designer</TagLine>
+      <TagLine>Creative Web Developer</TagLine>
     </HeroCopy>
     <Video loop muted autoPlay poster={Poster} className="fullscreen-bg-video">
       <source

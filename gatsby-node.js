@@ -13,16 +13,24 @@ exports.createPages = ({ graphql, actions }) => {
   // we use the provided allContentfulBlogPost query to fetch the data from Contentful
   return graphql(
     `
-      {
-        allContentfulProject {
-          edges {
-            node {
-              id
-              slug
-            }
+    {
+      allContentfulArt {
+        edges {
+          node {
+            id
+            slug
           }
         }
       }
+      allContentfulProject {
+        edges {
+          node {
+            id
+            slug
+          }
+        }
+      }
+    }
     `
   )
     .then(result => {
@@ -31,11 +39,23 @@ exports.createPages = ({ graphql, actions }) => {
       }
       // Resolve the paths to our template
       const projectTemplate = path.resolve("./src/templates/work.js")
+      const artTemplate = path.resolve("./src/templates/art.js")
+      
       // Then for each result we create a page.
       result.data.allContentfulProject.edges.forEach(edge => {
         createPage({
           path: `/work/${edge.node.slug}/`,
           component: slash(projectTemplate),
+          context: {
+            slug: edge.node.slug,
+            id: edge.node.id,
+          },
+        })
+      })
+      result.data.allContentfulArt.edges.forEach(edge => {
+        createPage({
+          path: `/art/${edge.node.slug}/`,
+          component: slash(artTemplate),
           context: {
             slug: edge.node.slug,
             id: edge.node.id,

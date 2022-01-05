@@ -53,7 +53,7 @@ const ArtPost = ({ data }) => {
           dangerouslySetInnerHTML={{ __html: body.childMarkdownRemark.html }}
         />
         <LinkContainer>
-          <ProjectHomeLink to="/work">View more projects</ProjectHomeLink>
+          <ProjectHomeLink to="/art">See more art</ProjectHomeLink>
         </LinkContainer>
       </Post>
     </Layout>

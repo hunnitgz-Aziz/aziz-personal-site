@@ -75,7 +75,7 @@ const ProjectLink = styled(props => <Link {...props} />)`
   @media (min-width: 641px) {
     &:hover {
       box-shadow: none;
-      padding: 1rem 0 1rem 1rem;
+      padding: 1rem;
       background: #c7c7c7;
     }
   }

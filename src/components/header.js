@@ -77,8 +77,37 @@ const RouteLink = styled(props => <Link {...props} />)`
   font-size: 2rem;
 `
 
+const DesktopRoute = styled.div`
+  display: none;
+
+  @media (min-width: 641px) {
+    display: block;
+  }
+`
+
+const DesktopRouteList = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+`
+
+const DesktopRouteListItem = styled.li`
+  display: inline-block;
+  margin-bottom: 0;
+`
+
+const DesktopRouteLink = styled(props => <Link {...props}/>)`
+  color: #222;
+  text-decoration: none;
+  text-transform: lowercase;
+  padding-left: 0.75rem;
+  box-shadow: none;
+  text-align: right;
+ 
+`
+
 const MenuIcon = styled.button`
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   width: 1.5rem;
@@ -86,6 +115,10 @@ const MenuIcon = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
+
+  @media (max-width: 640px) {
+    display: flex;
+  }
 
   div {
     width: 1.5rem;
@@ -120,6 +153,19 @@ const Header = ({ siteTitle }) => {
           <Logo>
             <LogoLink to="/">{siteTitle}</LogoLink>
           </Logo>
+          <DesktopRoute>
+            <DesktopRouteList>
+              <DesktopRouteListItem>
+                <DesktopRouteLink to="/work">work</DesktopRouteLink>
+              </DesktopRouteListItem>
+              <DesktopRouteListItem>
+                <DesktopRouteLink to="/art">art</DesktopRouteLink>
+              </DesktopRouteListItem>
+              <DesktopRouteListItem>
+                <DesktopRouteLink to="/about">about</DesktopRouteLink>
+              </DesktopRouteListItem>
+            </DesktopRouteList>
+          </DesktopRoute>
           <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
             <div></div>
             <div></div>

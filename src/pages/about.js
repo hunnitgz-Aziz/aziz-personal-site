@@ -61,6 +61,7 @@ const About = () => (
           Aziz Ramos is an artist, product designer and front-end developer with a
           passion in making digital products that just feel good. He has past experiences in creative direction, branding, product strategy, design systems, and conceptual development which solved creative challenges in health, politics, academics, gaming, and music spaces.
         </p>
+        <p><a href="https://docs.google.com/document/d/1AYMUuDntgBi7BEvsn0SK21ZspywiZDtLK4ab-C8JI7E/edit?usp=sharing" target="_blank">view resume</a></p>
         <h5>Background</h5>
         <p>Atlantic Health System, Senior Product Designer<br/>Morristown, NJ, 2021</p>
         <p>Pariah Interactive, Frontend Engineer<br/>Brooklyn, NY, 2021</p>

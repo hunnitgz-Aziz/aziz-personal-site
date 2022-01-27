@@ -162,9 +162,6 @@ const Header = ({ siteTitle }) => {
                 <DesktopRouteLink to="/art">art</DesktopRouteLink>
               </DesktopRouteListItem>
               <DesktopRouteListItem>
-                <DesktopRouteLink to="/services">services</DesktopRouteLink>
-              </DesktopRouteListItem>
-              <DesktopRouteListItem>
                 <DesktopRouteLink to="/about">about</DesktopRouteLink>
               </DesktopRouteListItem>
             </DesktopRouteList>
@@ -182,9 +179,6 @@ const Header = ({ siteTitle }) => {
             </RouteListItem>
             <RouteListItem>
               <RouteLink to="/art">Art</RouteLink>
-            </RouteListItem>
-            <RouteListItem>
-              <RouteLink to="/services">Services</RouteLink>
             </RouteListItem>
             <RouteListItem>
               <RouteLink to="/about">About</RouteLink>

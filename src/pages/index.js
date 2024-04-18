@@ -10,6 +10,7 @@ const Tabs = styled.div`
 `
 
 const Tab = styled.button`
+  color: black;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -62,6 +63,9 @@ const Press = styled.div`
 const MobileTable = styled.div`
   display: grid;
   gap: 1rem;
+  margin-bottom: 2rem;
+  grid-template-columns: repeat(6, 80%);
+  overflow-x: scroll;
 
   @media (min-width: 768px) {
     display: none;
@@ -77,6 +81,10 @@ const ProjectContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 2fr 2fr;
+  }
 `
 
 const ProjectTitle = styled.h5``
@@ -103,6 +111,12 @@ const ProjectLink = styled(props => <Link {...props}/>)`
       background: #c7c7c7;
     }
   }
+
+  @media (max-width: 767px) {
+    h5 {
+      font-size: 1rem;
+    }
+  } 
 `
 
 const mobileData = [
@@ -152,13 +166,13 @@ const projectData = [
     image: "https://images.ctfassets.net/4ths913quwq9/2qs76tXl7FFfwy8AY8Hk7Q/0bf9e5db8e4b53eae0c169554895b66a/screen_preview-salesforce.png"
   },
   {
-    title: "Reach - Voter Registration",
+    title: "Voter Registration",
     description: "Designing a feature to increase voter registration numbers by large amounts",
     link: "reach-voter-registration",
     image: "https://images.ctfassets.net/4ths913quwq9/1ITRZzPedY34csJ08OFMlN/01469e67b5adee05b148cf8a470d1109/reach-preview.png"
   },
   {
-    title: "Atlantic Health System Virtual Urgent Care",
+    title: "Virtual Urgent Care",
     description: "A telehealth system for Atlantic Health's 10 urgent care clinics",
     link: "atlantic-health-systems-virtual-urgent-care",
     image: "https://images.ctfassets.net/4ths913quwq9/4LSNkGoZneH63VVLGc3x6L/537532c3cd581b0bd4e9e85fac248784/screen_preview.png"
@@ -217,8 +231,8 @@ const IndexPage = () => {
               <MobileTable>
                 {mobileData.map((data, index) => (
                   <MobileCard key={index}>
-                    <h5>{data.year}</h5>
-                    <p>{data.company}</p>
+                    <h6>{data.year}</h6>
+                    <h5 style={{ marginBottom: 0 }}>{data.company}</h5>
                     <p>{data.position}</p>
                     <p>{data.impact}</p>
                   </MobileCard>

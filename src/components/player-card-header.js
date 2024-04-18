@@ -38,6 +38,14 @@ const PlayerImage = styled.img`
   margin-bottom: 0;
 `
 
+const PlayerBio = styled.p`
+  color: #888;
+
+  @media (max-width: 767px) {
+    font-size: 0.8rem;
+  }
+`
+
 
 export const PlayerCard = () => {
   return (
@@ -45,7 +53,7 @@ export const PlayerCard = () => {
       <PlayerInfo>
         <PlayerData>
           <PlayerName>Aziz Ramos</PlayerName>
-          <p style={{ color: "#888" }}>Designer • Queens, New York<br></br>Rutgers, The State University of New Jersey<br></br>11yrs experience</p>
+          <PlayerBio>Designer • Queens, New York<br></br>Rutgers, The State University of New Jersey<br></br>11yrs experience</PlayerBio>
         </PlayerData>
         <PlayerImage src={PlayerAvi} alt="Aziz Ramos"/>
       </PlayerInfo>

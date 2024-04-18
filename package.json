@@ -3,7 +3,7 @@
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Aziz Ramos <azizramos00@gmail.com>",
   "dependencies": {
     "@babel/helper-environment-visitor": "^7.16.5",
     "babel-plugin-styled-components": "^1.10.6",

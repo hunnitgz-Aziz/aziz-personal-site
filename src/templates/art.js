@@ -37,6 +37,8 @@ const ProjectHomeLink = styled(props => <Link {...props} />)`
 `
 
 const FeaturedImage = styled.img`
+  max-width: 1024px;
+  margin: 3rem auto 1.5rem;
   display: block;
   width: 100%;
 `

@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 import styled from "styled-components"
-import TransitionLink from "gatsby-plugin-transition-link"
+import LogoImage from "../images/ar-logo-white.png"
 
 const HeaderContainer = styled.header`
   height: 95px;
@@ -18,14 +18,14 @@ const Wrapper = styled.div`
   align-items: center;
   align-content: center;
   justify-content: space-between;
-  background: #d3d3d3;
+  background: #000000;
 
   @media (max-width: 480px) {
     padding: 1rem;
   }
 `
 
-const Logo = styled.h5`
+const Logo = styled.div`
   margin: 0;
   font-weight: 700;
 
@@ -34,8 +34,14 @@ const Logo = styled.h5`
   }
 `
 
+const LogoImageContainer = styled.img`
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0;
+`
+
 const LogoLink = styled(props => <Link {...props} />)`
-  color: #222;
+  color: #FFFFFF;
   text-decoration: none;
   box-shadow: none;
 
@@ -47,7 +53,7 @@ const RouteContainer = styled.div`
   position: fixed;
   height: 100vh;
   width: 100%;
-  background: #d3d3d3;
+  background: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,6 +66,7 @@ const RouteList = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 `
 
 const RouteListItem = styled.li`
@@ -68,13 +75,23 @@ const RouteListItem = styled.li`
 `
 
 const RouteLink = styled(props => <Link {...props} />)`
-  color: #222;
+  color: #FFF;
   text-decoration: none;
   text-transform: lowercase;
   padding-left: 0.75rem;
   box-shadow: none;
   text-align: center;
   font-size: 2rem;
+`
+
+const RecruitButton = styled.a`
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  margin-left: 0.75rem;
+  box-shadow: none;
+  border-radius: 999em;
+  padding: 0.25rem .75rem;
 `
 
 const DesktopRoute = styled.div`
@@ -97,7 +114,7 @@ const DesktopRouteListItem = styled.li`
 `
 
 const DesktopRouteLink = styled(props => <Link {...props}/>)`
-  color: #222;
+  color: #FFF;
   text-decoration: none;
   text-transform: lowercase;
   padding-left: 0.75rem;
@@ -125,7 +142,7 @@ const MenuIcon = styled.button`
     height: 2px;
     transform-origin: 1px;
     position: relative;
-    background: black;
+    background: white;
     transition: transform 300ms, opacity 300ms;
 
     &:first-child {
@@ -151,7 +168,7 @@ const Header = ({ siteTitle }) => {
       <HeaderContainer>
         <Wrapper>
           <Logo>
-            <LogoLink to="/">{siteTitle}</LogoLink>
+            <LogoLink to="/"><LogoImageContainer src={LogoImage}/></LogoLink>
           </Logo>
           <DesktopRoute>
             <DesktopRouteList>
@@ -162,7 +179,7 @@ const Header = ({ siteTitle }) => {
                 <DesktopRouteLink to="/art">art</DesktopRouteLink>
               </DesktopRouteListItem>
               <DesktopRouteListItem>
-                <DesktopRouteLink to="/about">about</DesktopRouteLink>
+                <RecruitButton href="mailto:azizramos00@gmail.com">Recruit Me!</RecruitButton>
               </DesktopRouteListItem>
             </DesktopRouteList>
           </DesktopRoute>
@@ -181,7 +198,7 @@ const Header = ({ siteTitle }) => {
               <RouteLink to="/art">Art</RouteLink>
             </RouteListItem>
             <RouteListItem>
-              <RouteLink to="/about">About</RouteLink>
+              <RecruitButton href="mailto:aziramos00@gmail.com">Recruit Me!</RecruitButton>
             </RouteListItem>
           </RouteList>
         </RouteContainer>

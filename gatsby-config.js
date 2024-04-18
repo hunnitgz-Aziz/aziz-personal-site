@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `aziz ramos`,
-    description: `Bored thinker, designer, and creative developer`,
+    description: `Experienced product designer who doesn't take no for an answer.`,
     author: `Aziz Ramos`,
     image: `https://not-ansari.s3.us-east-2.amazonaws.com/social-media/social-media-bg.jpg`,
     siteUrl: `http://www.notansari.com`,

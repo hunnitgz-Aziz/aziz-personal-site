@@ -5,11 +5,11 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-  
+  padding-top: 2.5rem;
   @media (min-width: 640px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 10px;
+    grid-column-gap: 1rem;
   }
 `
 

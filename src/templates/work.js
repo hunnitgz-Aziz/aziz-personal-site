@@ -12,7 +12,7 @@ const PostContainer = styled.div`
 
 const Title = styled.h3`
   max-width: 1024px;
-  margin: 0 auto 1.5rem;
+  margin: 3rem auto 1.5rem;
 `
 
 const Post = styled.div``
@@ -38,6 +38,8 @@ const ProjectHomeLink = styled(props => <Link {...props} />)`
 
 const FeaturedImage = styled.img`
   display: block;
+  max-width: 1024px;
+  margin: 0rem auto 1.5rem;
   width: 100%;
 `
 
@@ -47,8 +49,9 @@ const ProjectPost = ({ data }) => {
     <Layout>
       <SEO title={title} />
       <Post className="project-post">
-        <FeaturedImage alt={title} src={image.file.url} />
         <Title>{title}</Title>
+        <FeaturedImage alt={title} src={image.file.url} />
+        
         <PostContainer
           dangerouslySetInnerHTML={{ __html: body.childMarkdownRemark.html }}
         />
